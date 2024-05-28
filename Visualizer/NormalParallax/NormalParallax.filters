@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{b4ae752e-5aef-416f-a1ea-c32159a33a72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{03ea8df3-95ce-48e9-b1a5-3e732f1186ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GL Utils">
+      <UniqueIdentifier>{2bba9e24-79a3-4f5f-a9a5-2e19722ade01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ImGui">
+      <UniqueIdentifier>{dec27776-e59b-4e25-933a-be852b4a7559}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MyApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="includes\gCamera.cpp">
+      <Filter>GL Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="includes\GLconversions.cpp">
+      <Filter>GL Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="includes\GLDebugMessageCallback.cpp">
+      <Filter>GL Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="includes\Mesh_OGL3.cpp">
+      <Filter>GL Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="includes\ObjParser_OGL3.cpp">
+      <Filter>GL Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="includes\ProgramObject.cpp">
+      <Filter>GL Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="includes\ShaderObject.cpp">
+      <Filter>GL Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="includes\VertexArrayObject.cpp">
+      <Filter>GL Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="T:\OGLPack\include\imgui\imgui.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="T:\OGLPack\include\imgui\imgui_demo.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="T:\OGLPack\include\imgui\imgui_draw.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="T:\OGLPack\include\imgui\imgui_impl_sdl_gl3.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MyApp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\BufferObject.h">
+      <Filter>GL Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\gCamera.h">
+      <Filter>GL Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\GLconversions.hpp">
+      <Filter>GL Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\GLDebugMessageCallback.h">
+      <Filter>GL Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\GLUtils.hpp">
+      <Filter>GL Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\Mesh_OGL3.h">
+      <Filter>GL Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\ObjParser_OGL3.h">
+      <Filter>GL Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\ProgramObject.h">
+      <Filter>GL Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\ShaderObject.h">
+      <Filter>GL Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\TextureObject.h">
+      <Filter>GL Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="includes\VertexArrayObject.h">
+      <Filter>GL Utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="myFrag.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="myVert.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="includes\VertexArrayObject.inl">
+      <Filter>GL Utils</Filter>
+    </None>
+    <None Include="includes\BufferObject.inl">
+      <Filter>GL Utils</Filter>
+    </None>
+    <None Include="includes\ProgramObject.inl">
+      <Filter>GL Utils</Filter>
+    </None>
+    <None Include="includes\TextureObject.inl">
+      <Filter>GL Utils</Filter>
+    </None>
+    <None Include="skybox.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="skybox.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="parallax.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="parallax.vert">
+      <Filter>Shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\marble.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="assets\wood.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="assets\normal_map.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="assets\heightmap1.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="assets\heightmap2.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="assets\nml2_cross_product.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="assets\h.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="assets\elte_normal.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="assets\elte_gen_height.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="assets\elte_height.png">
+      <Filter>Assets</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
