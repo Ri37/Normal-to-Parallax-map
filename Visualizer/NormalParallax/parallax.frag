@@ -23,6 +23,9 @@ uniform vec3 Ka = vec3(1.0);
 uniform vec3 Kd = vec3(1.0);
 
 vec3 heightToNormal(vec2 texCoords) {
+    // Skála
+    float scale = 10;
+
     // Texel offset beállítása
     const ivec2 texelOffsetX = ivec2(1, 0); // Egy texel offset vízszintes mintavételért
     const ivec2 texelOffsetY = ivec2(0, 1); // Egy texel offset függőleges mintavételért
@@ -33,18 +36,15 @@ vec3 heightToNormal(vec2 texCoords) {
     float heightUp     = textureOffset(heightTexImage, texCoords, texelOffsetY).r;
     float heightDown   = textureOffset(heightTexImage, texCoords, -texelOffsetY).r;
 
-    // Értékek invertálása
-    heightRight  = abs(heightRight - 1);
-    heightLeft   = abs(heightLeft  - 1);
-    heightUp     = abs(heightUp    - 1);
-    heightDown   = abs(heightDown  - 1);
-
     // Gradiens számítása
-    float dX = heightRight - heightLeft;
-    float dY = heightUp - heightDown;
+    float dx = heightRight - heightLeft;
+    float dy = heightUp - heightDown;
+
+    vec3 dX = vec3(1, 0, dx * scale);
+    vec3 dY = vec3(0, 1, dy * scale);
 
     // Z komponens beállítása intenzitásért
-    vec3 normal = normalize(vec3(dX, dY, .1));
+    vec3 normal = normalize(cross(dX,dY));
 
     return normal;
 }

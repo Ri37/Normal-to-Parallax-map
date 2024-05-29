@@ -63,9 +63,9 @@ void main()
 
     vec3 normal;
     
-    #if defined(USE_NORMAL_MAP)
+    #if defined(USE_BUMP_MAP)
         normal = heightToNormal(vs_out_tex); // Normal számítása környező magasságokból
-    #elif defined(USE_BUMP_MAP)
+    #elif defined(USE_NORMAL_MAP)
         normal = texture(normalTexImage, vs_out_tex).xyz;
         normal = 2.0 * normal - 1.0;         // skálázás [0, 1] -> [-1, 1]
     #endif

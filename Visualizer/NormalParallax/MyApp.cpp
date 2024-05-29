@@ -244,8 +244,8 @@ void CMyApp::Render()
 }
 
 void CMyApp::RenderScene() {
-	ProgramObject* first = shaderSwitch ? m_programNormal : m_programBump;
-	ProgramObject* second = shaderSwitch ? m_programBump   : m_programNormal;
+	ProgramObject* first = shaderSwitch ? m_programBump : m_programNormal;
+	ProgramObject* second = shaderSwitch ? m_programNormal   : m_programBump;
 
 	glViewport(0, 0, w / 2, h);
 	RenderMapping(first);

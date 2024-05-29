@@ -33,8 +33,8 @@ def get_A(n):
 
 def get_b(normal):
     n, _, _ = normal.shape
-    X = normal[:,:,0] / normal[:,:,2]
-    Y = normal[:,:,1] / normal[:,:,2]
+    X =  normal[:,:,0] / normal[:,:,2]
+    Y = -normal[:,:,1] / normal[:,:,2]
 
     b = np.zeros((n, n))
 
@@ -43,8 +43,8 @@ def get_b(normal):
         for j in range(n):
             x_right = X[i, (j+1) % n]
             x_left = X[i, (j-1) % n]
-            y_up = -Y[(i+1) % n, j]
-            y_down = -Y[(i-1) % n, j]
+            y_up = Y[(i+1) % n, j]
+            y_down = Y[(i-1) % n, j]
 
             b[i, j] = x_right - x_left + y_up - y_down
 
